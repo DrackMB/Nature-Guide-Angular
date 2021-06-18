@@ -41,7 +41,10 @@
               "node_modules/primeng/resources/themes/saga-blue/theme.css"
 
             ],
-            "scripts": ["src/assets/js/widget_v2.0.js"]
+            "scripts": [
+              "src/assets/js/widget_v2.0.js",
+              "src/assets/js/scripts.js"
+                         ]
           },
           "configurations": {
             "production": {
