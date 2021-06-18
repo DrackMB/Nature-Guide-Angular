@@ -1,6 +1,19 @@
-<div>
-  <label>Test</label>
-  <select name="etatLieu" class="col-md-12 " >
-    <option  *ngFor="let f of ville">{{f.lets}}</option>
-  </select>
-</div>
+
+<section class="cards-wrapper">
+  <div class="card-grid-space" [routerLink]="['/espace-vert',{ id: f.libelle,numVille:f.numVille,pollutionKey:f.pollutionKey}]" *ngFor="let f of villeBydept">
+
+    <a class="card" [style.--bg-img]="'url('+f.image+')'">
+      <div>
+        <h1>{{f.libelle}}</h1>
+        <p></p>
+        <div class="tags">
+          <div class="tag"></div>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
+<br><br>
+<div style="text-align: center;margin:14px;"><a class="ghost-button-thick-border" (click)="goBack()" >Retour</a></div>
+
+

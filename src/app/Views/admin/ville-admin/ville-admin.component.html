@@ -1,0 +1,43 @@
+<div class="card col-md-6 m-3" >
+  <div class="card-header">Ajouter une ville</div>
+  <div class="card-body">
+
+
+    <div class="row">
+      <div class="col-md-6">
+        <label>nom de Ville</label>
+        <input type="text" class="form-control" [(ngModel)]="this.insertVille.libelle">
+      </div>
+
+      <div class="col-md-6">
+        <label>lat </label>
+        <input type="number" class="form-control" [(ngModel)]="this.insertVille.lets">
+      </div>
+
+      <div class="col-md-6">
+        <label>ing </label>
+        <input type="number" class="form-control" [(ngModel)]="this.insertVille.ing">
+      </div>
+
+      <div class="col-md-6">
+        <label >Departement</label> <input type="number" class="form-control" [(ngModel)]="this.insertVille.depart">
+      </div>
+
+      <div class="col-md-6">
+        <label >Image(URL)</label> <input type="text" class="form-control" [(ngModel)]="this.insertVille.image">
+      </div>
+
+      <div class="col-md-6">
+        <label >num Ville (API)</label> <input type="number" class="form-control" [(ngModel)]="this.insertVille.numVille">
+      </div>
+      <div class="col-md-6">
+        <label >poliction key (API) </label> <input type="text" class="form-control" [(ngModel)]="this.insertVille.pollutionKey">
+      </div>
+
+    </div>
+  </div>
+  <div class="card-footer">
+    <button class=" btn btn-block  btn-outline-dark" (click)="addville(insertVille)">Ajouter</button>
+  </div>
+
+</div>

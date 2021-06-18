@@ -1,0 +1,61 @@
+<div id="b">
+<div class = "card-wrapper">
+  <div class = "card">
+    <!-- card left -->
+    <div class = "product-imgs">
+      <div class = "img-display">
+        <div class = "img-showcase">
+          <img *ngFor="let im of espaceVertImage" src="{{im.image_url}}"  alt = "image">
+        </div>
+      </div>
+      <div class = "img-select">
+        <div class = "img-item" *ngFor="let m of espaceVertImage;let i =index">
+          <a  [attr.data-id]="i">
+            <img src ="{{m.image_url}}" alt = "image">
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- card right -->
+    <div class = "product-content">
+      <h2 class = "product-title">Espace Vert {{vals}}</h2>
+      <div class = "product-detail">
+        <h2>A PROPOS: </h2>
+        <p>Un espace vert désigne, en urbanisme, tout espace d'agrément végétalisé. L'expression est généralement employée pour désigner les espaces publics ou semi-publics situés en milieu urbain ou péri-urbain.</p>
+        <ul>
+          <li>ouvert: <span>6:00-21:00</span></li>
+          <li>lundi: <span>6:00-21:00</span></li>
+          <li>mardi: <span>6:00-21:00</span></li>
+          <li>samedi: <span>6:00-21:00</span></li>
+          <li>dimanche: <span>6:00-21:00</span></li>
+        </ul>
+      </div>
+
+      <div class = "purchase-info">
+        <button [routerLink]="['/maps',{ libelle:vals,lats:lats,ing:ing}]" type = "button" class = "btn">
+          Itineraire
+        </button>
+      </div>
+
+      <div class = "social-links">
+        <p>Partager sur: </p>
+        <a href = "#">
+          <i class = "fa fa-facebook" aria-hidden="true"></i>
+        </a>
+        <a href = "#">
+          <i class = "fa fa-twitter"></i>
+        </a>
+        <a href = "#">
+          <i class = "fa fa-instagram"></i>
+        </a>
+        <a href = "#">
+          <i class = "fa fa-whatsapp"></i>
+        </a>
+        <a href = "#">
+          <i class = "fa fa-pinterest"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

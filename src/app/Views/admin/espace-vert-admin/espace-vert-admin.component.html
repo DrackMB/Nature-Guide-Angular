@@ -1,0 +1,42 @@
+<div class="card col-md-6 m-3" >
+  <div class="card-header">Ajouter une espace vert</div>
+  <div class="card-body">
+
+
+    <div class="row">
+      <div class="col-md-6">
+        <label>nom espace vert</label>
+        <input type="text" class="form-control" [(ngModel)]="this.espaceVertadd.libelle">
+      </div>
+
+      <div class="col-md-6">
+        <label>lat </label>
+        <input type="number" class="form-control" [(ngModel)]="this.espaceVertadd.lets">
+      </div>
+
+      <div class="col-md-6">
+        <label>ing </label>
+        <input type="number" class="form-control" [(ngModel)]="this.espaceVertadd.ing">
+      </div>
+
+      <div class="col-md-6">
+        <label >disciption</label> <input type="text" class="form-control" [(ngModel)]="this.espaceVertadd.disciption">
+      </div>
+
+      <div class="col-md-6">
+        <label >Image(URL)</label> <input type="text" class="form-control" [(ngModel)]="this.espaceVertadd.image">
+      </div>
+      <div class="col-md-6">
+        <label >ville</label> <select name="ville" [(ngModel)]="this.espaceVertadd.ville" class="col-md-auto">
+        <option  *ngFor="let c of ville " [ngValue]="c" >{{c.libelle}}</option>
+      </select>
+      </div>
+
+
+    </div>
+  </div>
+  <div class="card-footer">
+    <button class=" btn btn-block  btn-outline-dark" (click)="addEspaceVert(espaceVertadd)">Ajouter</button>
+  </div>
+
+</div>

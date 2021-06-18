@@ -1,0 +1,33 @@
+<div class="registration-form">
+  <div class="form">
+    <div class="form-icon">
+      <span><i class="fa fa-user-circle-o"></i></span>
+    </div>
+    <div class="form-group">
+      <input  type="text" class="form-control item" id="nom" placeholder="Nom" [(ngModel)]="user.nom">
+    </div>
+    <div class="form-group">
+      <input  type="text" class="form-control item" id="prenom" placeholder="Prenom" [(ngModel)]="user.prenom">
+    </div>
+    <div class="form-group">
+      <input  type="text" class="form-control item" id="pseudo" placeholder="Pseudo" [(ngModel)]="user.pseudo">
+    </div>
+    <div class="form-group">
+      <input  type="password" class="form-control item" id="motDePasse" placeholder="Mot De Passe" [(ngModel)]="user.motDePasse">
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control item" id="email" placeholder="E-mail" [(ngModel)]="user.email">
+    </div>
+    <div class="form-group">
+      <button type="button" class="btn btn-block create-account"(click)="inscription(user)">Create Account</button>
+    </div>
+  </div>
+  <div class="social-media">
+    <h5>Sign up with social media</h5>
+    <div class="social-icons">
+      <a href="#"><i class="fa fa-facebook" title="Facebook"></i></a>
+      <a href="#"><i class="fa fa-google" title="Google"></i></a>
+      <a href="#"><i class="fa fa-twitter" title="Twitter"></i></a>
+    </div>
+  </div>
+</div>

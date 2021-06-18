@@ -1,0 +1,34 @@
+<div style="text-align: center;"><span style="color: #000; "><h1>{{vals.get('id')}}</h1></span></div>
+<br>
+<hr>
+<br>
+
+<section class="cards-wrapper">
+  <div class="card-grid-space" [routerLink]="['/espace-vertDetaill',{ libelle: val.libelle,lats:val.lets,ing:val.ing}]" *ngFor="let val of espaceVert " >
+    <a class="card"  [style.--bg-img]="'url('+val.image+')'">
+      <div>
+        <h1>{{val.libelle}}</h1>
+        <p></p>
+        <div class="tags">
+          <div class="tag">{{vals.get('id')}}</div>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+
+<div style="text-align: center;"><iframe id="widget_autocomplete_preview" width="1400" height="150" frameborder="0" [src]="urlSafe"> </iframe></div>
+
+
+<div style="text-align: center;margin: 60px;">
+  <div name="airvisual_widget" id="{{vals.get('pollutionKey')}}"></div>
+  <script type="text/javascript" src="https://www.airvisual.com/scripts/widget_v2.0.js"></script>
+</div>
+
+
+<div style="text-align: center;margin:14px;" ><a class="ghost-button-thick-border" (click)="goBack()" >Retour</a></div>
+
+
+
